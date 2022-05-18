@@ -1,0 +1,12 @@
+<div class="switch-field" afterRender="change(0)">
+    <div class="switch">
+        <input type="radio" name="private_business" id="radio-private" value="0" checked="checked"
+               data-bind="click: click, attr: {'aria-required': required,'aria-invalid': error() ? true : 'false',id: uid + '_private',}">
+        <label for="radio-private" data-bind="i18n: 'Private person', attr: {'for': uid + '_private'}"></label>
+    </div>
+    <div class="switch">
+        <input type="radio" name="private_business" id="radio-business" value="1"
+               data-bind="click: click, attr: {'aria-required': required,'aria-invalid': error() ? true : 'false',id: uid + '_business',}">
+        <label for="radio-business" data-bind="i18n: 'Business', attr: {'for': uid + '_business',}"></label>
+    </div>
+</div>

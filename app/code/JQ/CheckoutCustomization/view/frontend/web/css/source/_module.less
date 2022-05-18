@@ -1,0 +1,68 @@
+//media all (styles-m.less)
+& when (@media-common = true) {
+
+  // Switch: buy as 'Private person' or 'Buissness'
+  .switch-field {
+    display: flex;
+
+    .switch {
+      width: 100%;
+      max-width: 50%;
+      flex: 0 0 50%
+    }
+  }
+
+  .checkout-index-index .billing-address-form,
+  .form-shipping-address {
+    .fieldset {
+      .field[name="custom_attributes.private_business"] {
+        width: 100% !important;
+        position: relative;
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+    .field[name*=".company"], .field[name*=".vat_id"] {
+      display:none;
+      .label {
+        position: relative;
+      }
+
+      .label:after {
+        content: '*';
+        color: #1f1311;
+        font-size: 1.6rem;
+        margin: 0 0 0 5px;
+        position: absolute;
+        right: -7px;
+        top: 0;
+      }
+    }
+  }
+  // end Switch: buy as 'Private person' or 'Buissness'
+
+}
+
+// min 768px
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+}
+
+// min 1024px
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__l) {
+
+}
+
+// min 1440px
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__xl) {
+
+}
+
+// non standard breakpoint (styles-l.less)
+& when (@media-common = false) {
+
+  @media screen and (min-width: 1200px) {
+
+  }
+
+}
